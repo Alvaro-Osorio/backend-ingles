@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alumnos</title>
+</head>
+
+<body>
+
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <td>n°</td>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Profesor</td>
+                <td>Grupo</td>
+                <td>Calificación</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (alumnos) { %>
+                <% for(var i = 0; i < alumnos.length; i++) { %>
+                    <tr>
+                        <td>
+                            <%= (i + 1) %>
+                        </td>
+                        <td>
+                            <%= alumnos[i].nombre_alumno %>
+                        </td>
+                        <td>
+                            <%= alumnos[i].apellido_p %>
+                        </td>
+                    </tr>
+                    <% } %>
+                        <% } %>
+        </tbody>
+
+    </table>
+</body>
+
+</html>
